@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add CSS file for styling -->
+    <style>
+        /* Additional CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .grade-selector {
+            margin-bottom: 20px;
+        }
+        .grade-selector label {
+            font-weight: bold;
+        }
+        .grade-selector select {
+            margin-left: 10px;
+        }
+        .section {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Dashboard!</h1>
+        <div class="grade-selector">
+            <label for="grade">Select Grade:</label>
+            <select id="grade" onchange="showMessage()">
+                <option value="grade-1">Grade 1</option>
+                <option value="grade-2">Grade 2</option>
+                <option value="grade-3">Grade 3</option>
+                <option value="grade-4">Grade 4</option>
+                <option value="grade-5">Grade 5</option>
+                <option value="grade-6">Grade 6</option>
+                <option value="grade-7">Grade 7</option>
+                <option value="grade-8">Grade 8</option>
+                <option value="grade-9">Grade 9</option>
+                <option value="grade-10">Grade 10</option>
+                <option value="grade-11">Grade 11</option>
+                <option value="grade-12">Grade 12</option>
+            </select>
+        </div>
+    </header>
+    <div class="section">
+        <h2><a href="product_info.html" target="_blank">Product Information and Hardware</a></h2>
+    </div>
+    <div class="section">
+        <h2><a href="files_folders.html" target="_blank">Files and Folders</a></h2>
+    </div>
+    <script>
+        function showMessage() {
+            var grade = document.getElementById("grade").value;
+            if (grade === "grade-10") {
+                var confirmation = confirm("You are being redirected to the page. Do you want to proceed?");
+                if (confirmation) {
+                    window.location.href = "https://drive.google.com/file/d/13ZPIX1ni9Uu6vsjTvD4VeiKzMomY_2Tb/view?usp=sharing";
+                }
+            } else if (grade === "grade-1" || grade === "grade-2" || grade === "grade-3" || grade === "grade-4" || grade === "grade-5" || grade === "grade-6" || grade === "grade-7" || grade === "grade-8" || grade === "grade-9") {
+                alert("Sorry, currently not available.");
+            } else if (grade === "grade-11" || grade === "grade-12") {
+                alert("Sorry, currently not available.");
+            }
+        }
+    </script>
+</body>
+</html>
